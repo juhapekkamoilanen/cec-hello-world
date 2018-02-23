@@ -7,7 +7,7 @@ application = Flask(__name__)
 def hello():
     print('hello you log watcher!')
     
-    file_obj = open('/mnt/vanilla-logdir/cec-vanilla.log', 'a')
+    file_obj = open('/mnt/cec-vanilla.log', 'a')
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     file_obj.write(timestamp + ' ' + socket.gethostname() + ' \n')
     file_obj.close()
