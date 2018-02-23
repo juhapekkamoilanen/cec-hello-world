@@ -23,11 +23,7 @@ def hello():
     except:
         content="error"
     
-    return "<pre>Hello CEC, your visit has been logged:\n" + \
-        socket.gethostname()+timestamp+"\n\n" + \
-        "all logs:\n" + \
-        content + \ 
-        "</pre>"
+    return "<pre>Hello CEC, your visit has been logged:\n" + socket.gethostname() + timestamp + "\n\n" + "All logs:\n" + content + "</pre>"
 
 
 if __name__ == "__main__":
