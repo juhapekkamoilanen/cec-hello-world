@@ -18,11 +18,12 @@ def hello():
         
         file_obj2 = open('/mnt/cec-vanilla.log', 'r')
         foo=file_obj2.read()
+        print(foo)
         file_obj2.close()
     except:
         foo="error"
     
-    return "Hello CEC, Im JPM - " + foo + "! Greetings from "+socket.gethostname()+"\n"+timestamp+"\n"
+    return "Hello CEC, Im version 1 - " + foo + "! Greetings from "+socket.gethostname()+"\n"+timestamp+"\n"
 
 
 if __name__ == "__main__":
