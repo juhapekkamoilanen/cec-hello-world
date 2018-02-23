@@ -15,6 +15,10 @@ def hello():
         file_obj = open('/mnt/cec-vanilla.log', 'a')
         file_obj.write(timestamp + ' ' + socket.gethostname() + ' \n')
         file_obj.close()
+        
+        file_obj2 = open('/mnt/cec-vanilla.log', 'r')
+        foo=file_obj2.read()
+        file_obj2.close()
     except:
         foo="error"
     
