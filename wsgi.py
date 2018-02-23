@@ -8,22 +8,26 @@ application = Flask(__name__)
 def hello():
     print('hello you log watcher!')
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    foo="0"
+    content=""
     
     try:
-        foo="1"
+        content="1"
         file_obj = open('/mnt/cec-vanilla.log', 'a')
         file_obj.write(timestamp + ' ' + socket.gethostname() + ' \n')
         file_obj.close()
         
         file_obj2 = open('/mnt/cec-vanilla.log', 'r')
         foo=file_obj2.read()
-        print(foo)
+        print(content)
         file_obj2.close()
     except:
-        foo="error"
+        content="error"
     
-    return "<pre>Hello CEC, Im version 1 - " + foo + "! Greetings from "+socket.gethostname()+"\n"+timestamp+"\n</pre>"
+    return "<pre>Hello CEC, your visit has been logged:\n" + \
+        socket.gethostname()+timestamp+"\n\n" + \
+        "all logs:\n" + \
+        content + \ 
+        "</pre>"
 
 
 if __name__ == "__main__":
