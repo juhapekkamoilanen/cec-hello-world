@@ -17,7 +17,7 @@ def hello():
         file_obj.close()
         
         file_obj2 = open('/mnt/cec-vanilla.log', 'r')
-        foo=file_obj2.read()
+        content=file_obj2.read()
         print(content)
         file_obj2.close()
     except:
