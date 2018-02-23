@@ -13,7 +13,7 @@ def hello():
     try:
         content="1"
         file_obj = open('/mnt/cec-vanilla.log', 'a')
-        file_obj.write(socket.gethostname() + timestamp + ' \n')
+        file_obj.write(timestamp + ' ' + socket.gethostname() + '\n')
         file_obj.close()
         
         file_obj2 = open('/mnt/cec-vanilla.log', 'r')
@@ -23,7 +23,7 @@ def hello():
     except:
         content="error"
     
-    return "<pre>Hello CEC, your visit has been logged:\n" + socket.gethostname() + timestamp + "\n\n" + "All logs:\n" + content + "</pre>"
+    return "<pre>Hello CEC, your visit has been logged:\n" + timestamp + ' ' + socket.gethostname() + "\n\n" + "All logs:\n" + content + "</pre>"
 
 
 if __name__ == "__main__":
