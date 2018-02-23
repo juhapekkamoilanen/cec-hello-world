@@ -23,7 +23,7 @@ def hello():
     except:
         foo="error"
     
-    return "Hello CEC, Im version 1 - " + foo + "! Greetings from "+socket.gethostname()+"\n"+timestamp+"\n"
+    return "<pre>Hello CEC, Im version 1 - " + foo + "! Greetings from "+socket.gethostname()+"\n"+timestamp+"\n</pre>"
 
 
 if __name__ == "__main__":
