@@ -15,7 +15,7 @@ def hello():
         #file_obj = open('/mnt/cec-vanilla.log', 'a')
         #file_obj.write(timestamp + ' ' + socket.gethostname() + ' \n')
         #file_obj.close()
-    catch:
+    except:
         foo="error"
     
     return "Hello CEC, Im JPM - " + foo + "! Greetings from "+socket.gethostname()+"\n"+timestamp+"\n"
